@@ -82,3 +82,9 @@ class Helix:
 
     def top_game(self) -> 'helix.Game':
         return self.top_games()[0]
+
+    def clips(self, **kwargs) -> List['helix.Clip']:
+        return helix.Clips(self.api).top(**kwargs)
+    
+    def clip(self, **kwargs) -> 'helix.Clip':
+        return self.clips()[0]
