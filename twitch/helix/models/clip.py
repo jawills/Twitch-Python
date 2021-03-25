@@ -9,7 +9,6 @@ class Clip(Model):
     def __init__(self, api: API, data: Dict[str, Any]):
         super().__init__(api, data)
 
-        print(data)
         self.broadcaster_id: str = data.get('broadcaster_id')
         self.broadcaster_name: str = data.get('broadcaster_name')
         self.created_at: str = data.get('created_at')
